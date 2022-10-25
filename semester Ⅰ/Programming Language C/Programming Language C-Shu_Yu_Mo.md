@@ -1,13 +1,13 @@
-## Programming Language C
+# Programming Language C
 
-### 19/9/2022 (week 1)
+## 19/9/2022 (week 1)
 
 - 1972 by Bell Lab.
 - `\n` means *newline* or *return*
 
-### 20/9/2022 (week 2)
+## 20/9/2022 (week 2)
 
-#### About Escape sequence
+### About Escape sequence
 
 - `\b` means backspace. It **can not delete** the last character, just **move the cursor one position back**, and the next character will overwrite it. if `\b` is the last character its effect won't be display.
 
@@ -43,14 +43,14 @@
 
 
 
-#### other points
+### other points
 
 - The remainder operator (%) can be used only with integer operands.
 - he operators *, / and % are on the same level of precedence, and the operators + and - are on a lower level of precedence
 
-### 27/9/2022
+## 27/9/2022
 
-#### Number System
+### Number System
 
 - prefix(for coding)
   - Octal: 0
@@ -65,16 +65,17 @@
 
 
 
-### 4/10/2022
 
-#### IEEE 754 Standard
+## 4/10/2022
 
-##### 通用标准
+### IEEE 754 Standard
+
+#### 通用标准
 
 - 32bits: 1(sign) - 8(Exponent) - 23(Mantissa)
 - 64bits: 1(sign) - 11(Exponent) - 52(Mantissa)
 
-##### 分类
+#### 分类
 
 - Normalized ($\text{exp} \not= {全是0}\ \text{and}\ \text{exp} \not= \text{全是1}$)
   - (**忽略头部1**)忽略小数点前面的 1 ，只记录尾数
@@ -87,95 +88,88 @@
   - $M \not=0$ 表示 $(-1)^{s}\times$ $\color{red}{0}$$.\text{mantissa} \times 2^{\text{Exp} - \sigma}$
 - Special Value(exp全是$1$)
   - Nan
-  
+
     - $M\not=1$
   - infinity number
-  
+
     - $M=0$ ，$s$ 表示正负无穷
-  
-    
 
-#### 表达式
-
-- 强制类型转换运算优先级 （C 风格强制类型转换优先级最高）
-
-####  enumeration constants
+###  enumeration constants
 
 ```enum { Wed , Tues};```
 
 可以给某些元素赋初值，然后后面的元素会递增。初值 int, long long 均可
 
-#### sizeof
+### sizeof
 
 sizeof 返回值是一个 size_t，是一个unsigned int。[sizeof](https://zh.cppreference.com/w/c/language/sizeof)
 
-#### [Two's Complement](https://www.cs.cornell.edu/~tomf/notes/cps104/twoscomp.html)
+### [Two's Complement](https://www.cs.cornell.edu/~tomf/notes/cps104/twoscomp.html)
 
 - a leading 1 means the number is negative, a leading 0 means the number is 0 or positive.
 - 正反转换 都是 取反+加一
 
-##### 浮点数(十进制)有效数字（粗略）
+### 浮点数(十进制)有效数字（粗略）
 
 - float: 7 - 8
 - double: 16 - 17
 - long double: 17 - 18
 
-##### 自增自减运算符 [待查](https://zh.cppreference.com/w/cpp/language/operator_incdec)
+### 自增自减运算符 [待查](https://zh.cppreference.com/w/cpp/language/operator_incdec)
 
 后增 计算发生在读取的下一刻，而不是语句结束后
 
 [练习](https://l.xmu.edu.my/pluginfile.php/801800/mod_resource/content/1/Chapter2.pdf) P78
 
-##### 数值提升顺序
+### 数值提升顺序
 
 - `char` 类型和 `short` 类型在进行算术运算时会自动提升为 `int` 类型。类似地，`unsigned short` 类型在进行算术运算时会自动提升为 `unsigned int` 类型。
 - `bool` 类型可以提升为整型，`false` 变为 ，而 `true` 对应为 。
 - float * float = float（yes）
 - int * float = float （yes）
 - short * char = int
+- unsigned > signed 
 - https://stackoverflow.com/questions/5563000/implicit-type-conversion-rules-in-c-operators
 
-![image-20221012003052645](./Programming Language C.assets/image-20221012003052645.png)
+### [运算符优先级](https://zh.cppreference.com/w/cpp/language/operator_precedence)
 
+注意：强制类型转换 *运算优先级* 很高
 
+![image-20221025143738464](./Programming Language C-Shu_Yu_Mo.assets/image-20221025143738464.png)
 
-![image-20221012000000743](./Programming Language C.assets/image-20221012000000743.png)
-
-
-
-[运算符优先级](https://zh.cppreference.com/w/cpp/language/operator_precedence)
-
-### *C Primer Plus* 补充
-
-#### 输出八、十六进制
-
-- %d %o %x分别：十、八、十六
-- 输出八进制前缀 0 ：%#o
-- 输出十六进制前缀 0x ：%#x
-- 输出十六进制前缀 0X ：%#x
-
-#### 关于整数数据类型大小
+### 关于整数数据类型大小
 
 ![image-20221024203423781](./Programming Language C-Shu_Yu_Mo.assets/image-20221024203423781.png)
 
-C标准仅要求：`1 == sizeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long) <= sizeof(long long) `
+C 标准仅要求：
+
+`1 == sizeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long) <= sizeof(long long) `
 
 所以具体某一个类型位长是多少是不确定的。
 
 ![image-20221024203337884](./Programming Language C-Shu_Yu_Mo.assets/image-20221024203337884.png)
 
-##### 输出
- - %(u/~) (ll/l/~) + (d/o/x)
+### `printf` 详解
 
-#### 数值常量 
+- `%` + [转换行为修饰标签] + [宽域] + [.精度] + [长度修饰符] + [转换指示符]
+- [转换行为修饰标签]
+  - `-` 域内右对齐
+  -  `+` 始终显示符号
+  - `空格`   TODO: 待查
+  - `#` 开启 ***替用形式***
+  - `0` 使用前导零填充域
 
+![image-20221025141349010](./Programming Language C-Shu_Yu_Mo.assets/image-20221025141349010.png)
 
+![image-20221025141501294](./Programming Language C-Shu_Yu_Mo.assets/image-20221025141501294.png)
+
+### 数值常量
 
 对于代码中使用的数字，编译器会依次尝试以下变量类型进行存储，直到能够存下该值：
 
 `int` 、`unsigned int`、`long`、`unsigned long`、`long long`、`unsigned long long`
 
-可以指定存储类型。
+可以指定存储类型（`LL`, `ULL`）。
 
 
 
