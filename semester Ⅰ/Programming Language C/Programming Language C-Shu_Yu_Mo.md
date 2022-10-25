@@ -145,6 +145,40 @@ sizeof 返回值是一个 size_t，是一个unsigned int。[sizeof](https://zh.c
 
 [运算符优先级](https://zh.cppreference.com/w/cpp/language/operator_precedence)
 
+### *C Primer Plus* 补充
+
+#### 输出八、十六进制
+
+- %d %o %x分别：十、八、十六
+- 输出八进制前缀 0 ：%#o
+- 输出十六进制前缀 0x ：%#x
+- 输出十六进制前缀 0X ：%#x
+
+#### 关于整数数据类型大小
+
+![image-20221024203423781](./Programming Language C-Shu_Yu_Mo.assets/image-20221024203423781.png)
+
+C标准仅要求：`1 == sizeof(char) <= sizeof(short) <= sizeof(int) <= sizeof(long) <= sizeof(long long) `
+
+所以具体某一个类型位长是多少是不确定的。
+
+![image-20221024203337884](./Programming Language C-Shu_Yu_Mo.assets/image-20221024203337884.png)
+
+##### 输出
+ - %(u/~) (ll/l/~) + (d/o/x)
+
+#### 数值常量 
+
+
+
+对于代码中使用的数字，编译器会依次尝试以下变量类型进行存储，直到能够存下该值：
+
+`int` 、`unsigned int`、`long`、`unsigned long`、`long long`、`unsigned long long`
+
+可以指定存储类型。
+
+
+
 
 
 
