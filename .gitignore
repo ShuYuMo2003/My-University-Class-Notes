@@ -11,3 +11,5 @@
 *.py
 *.cpp
 *.c
+
+*.ignore.*
