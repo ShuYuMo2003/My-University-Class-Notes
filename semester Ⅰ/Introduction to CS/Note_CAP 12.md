@@ -12,7 +12,7 @@
 #### （问题）Issues of Moving Online
 
 - Risks of moving online
-  - (同样的客户)Same customers moving from in-store to online 
+  - (同样的客户)Same customers moving from in-store to online （？？）
 
   - (新的线上竞争) Facing new competition online 
 
@@ -287,6 +287,76 @@ Relational Database Management System (RDBMS)（关系型数据库）
   - If the primary key for a record in the Customer table changes, all corresponding records in the Order table must be modified using a cascading update（被指向的记录发生更改时，指向它的记录应该被更新）（**级联更新**）
   - If a record in the Customer table is deleted, all corresponding records in the Order table must be deleted using a cascading delete.（被指向的记录删除之后，指向他的记录**必须删除**？？？）
 
-#### 原则
+#### SQL (Structured Query Language)
 
-- 
+With database management systems, many tasks, such as retrieving databases, can be done either 
+
+- programmatically
+- uses a user interface.
+
+##### overall
+
+- Standard query language for DBMS
+- Use SQL queries to retrieve data according to some criteria （标准）
+
+##### 关系型数据库 操作
+
+![image-20221029203927625](./Note_CAP 12.assets/image-20221029203927625.png)
+
+
+
+### Data Science
+
+#### 概念
+
+- ***Big data***: Huge amounts of available data 
+- ***Data analysis***: Process of finding the right data sets, putting data in the right format, and writing queries to extract information （找到正确数据、把数据处理成正确格式、写查询提取信息）
+- ***Data science***: Incorporates data analysis tasks（包含数据分析任务）, but requires knowledge of the enterprise for useful queries（有用的查询） and **the use of statistics**（用于分析） and **visualization techniques**（可视化技术） to **interpret the results**（解释结果） and **predict future strategies**（预测未来策略） to achieve a **predetermined goal**（预定目标）
+- ***Data warehouse（数据仓库）***: A collection of databases that contain current and archived data for research and analysis
+- ***Data mining（数据挖掘）***: Process of analyzing data to extract and interpret previously hidden patterns through several steps:
+  - Determine the problem to be solved
+  -  Review the condition of the data: 
+    - Does all data have the same structure? 
+    - Are any tuples missing information?
+  - Determine a model that will help bring out the patterns
+  - Evaluate your model: （评估模型，预测已有数据）
+    - Are the results predicted borne out by further data? 
+    - Would a different model give better results?
+
+#### Other Data Science Tools
+- Statistical analysis 
+- Graphical visualization 
+- Language R can help with both these tasks
+
+#### Privacy issues associated with data mining（数据挖掘隐私问题）
+
+Automatically analyzing large amounts of data to uncover hidden patterns（？？？）
+
+#### Data brokers（companies that collect and sell data.）
+
+get data from：
+
+- Public records - Birth certificates, marriage certificates…
+- Publically available information - Telephone directories, business directories, newspapers, website tracking data
+- Nonpublic data purchased or acquired from **other companies or data brokers** - consumer transaction data; cell phone records; information from mobile apps
+
+#### 作用
+
+make contributions to
+
+- Medicine
+- science
+- ecology
+- and many more fields
+
+
+
+![image-20221029220657256](./Note_CAP 12.assets/image-20221029220657256.png)
+
+![image-20221029220707492](./Note_CAP 12.assets/image-20221029220707492.png)
+
+![image-20221029220718158](./Note_CAP 12.assets/image-20221029220718158.png)
+
+![image-20221029220726382](./Note_CAP 12.assets/image-20221029220726382.png)
+
+![image-20221029220733377](./Note_CAP 12.assets/image-20221029220733377.png)
