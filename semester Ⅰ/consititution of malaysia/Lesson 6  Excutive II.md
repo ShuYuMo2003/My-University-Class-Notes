@@ -94,6 +94,8 @@ two choices:
 
 ##  Cabinet
 
+### Formation of Cabinet
+
 - PM  must from  parliament
 - PM then advice the YDPA to appoint ***Ministers*** from among the members of ***either House*** to form the Cabinet.
 - PM can select Cabinet colleagues without anyone's approval.
@@ -103,6 +105,40 @@ two choices:
 - YDPA cannot dismiss the Minister at will.
 
 
+
+### Take Oath
+
+Before a Minister exercises the functions of his office, he must in the presence of the YDPA take oath of office, allegiance and secrecy.
+
+### Cabinet Meeting
+
+The Cabinet is the supreme **policy-making body in the country**. It meets for about 4 hours once a week, on Wednesdays.
+
+### Collective Responsibility
+
+- Although cabinet ministers are appointed by the YDPA, they are collectively responsible to parliament.
+- Member of Parliament can ask questions to the ministers
+- Ministers must publicly support all governmental decisions made in Cabinet even if they do not privately agree with them
+- The ministers must speak with one voice.
+- If a Minister disagrees with a Cabinet decision, he is nevertheless obliged to defend it in public. If he feels unable to do so, he should resign. He cannot criticize it in public and yet remain in the Cabinet.
+- But having resign from the Cabinet，he is not obliged to resign from Parliament or from his party.
+
+
+
+A Rank：(从上到下，级别降低)
+
+- Minister （Political Secretaries（can be anyone. not only from House））
+
+- Deputy Minister
+
+- Parliamentary Secretaries
+
+  
+
+### Parliamentary Secretaries
+
+- Appointed by PM
+- Must from either House
 
 
 
